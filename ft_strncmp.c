@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t	i;
@@ -23,14 +21,3 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 		i++;
 	return (s1[i] - s2[i]);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	char str1[] = "ABC";
-	char str2[] = "AB";
-	
-	printf("ABC is greater than AB: %d\n", ft_strncmp(str1, str2, 3));
-	printf("ABC and AB  are equal in 
-	the first two bytes: %d\n", ft_strncmp(str1, str2, 2));
-	printf("AB is shorter than ABC: %d\n", ft_strncmp(str2, str1, 3));
-}*/

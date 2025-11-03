@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 12:19:20 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 08:54:45 by decabral         ###   ########.fr       */
+/*   Created: 2025/10/31 12:06:37 by decabral          #+#    #+#             */
+/*   Updated: 2025/10/31 12:07:37 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
+	int	i;
+	int	signal;
+	int	result;
 
 	i = 0;
-	if (dest > src)
+	signal = 1;
+	result = 0;
+	while (nptr[i] >= 9 && nptr[i] <= 13 || nptr[i] == ' ')
+		i++;
+	if (nptr[i] == 43 || nptr[i] == 45)
 	{
-		i = n;
-		while (i > 0)
-		{
-			i--;
-			((char *)dest)[i] = ((const char *)src)[i];
-		}
+		if (nptr[i] == 45)
+			signal *= -1;
+		i++;
 	}
-	else
-		ft_memcpy (dest, src, n);
-	return (dest);
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (result * signal);
 }

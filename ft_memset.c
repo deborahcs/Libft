@@ -6,9 +6,11 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:01 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/22 15:06:00 by decabral         ###   ########.fr       */
+/*   Updated: 2025/10/31 11:18:54 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

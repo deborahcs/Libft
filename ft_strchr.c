@@ -6,13 +6,13 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 11:17:17 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/27 14:43:03 by decabral         ###   ########.fr       */
+/*   Updated: 2025/10/31 12:04:57 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	pointer;

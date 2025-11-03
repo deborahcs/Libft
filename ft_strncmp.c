@@ -6,9 +6,11 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 08:27:05 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/21 08:27:07 by decabral         ###   ########.fr       */
+/*   Updated: 2025/10/31 11:13:42 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {

@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 12:19:20 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 08:54:45 by decabral         ###   ########.fr       */
+/*   Created: 2025/11/03 17:09:56 by decabral          #+#    #+#             */
+/*   Updated: 2025/11/03 17:10:45 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
-
-	i = 0;
-	if (dest > src)
-	{
-		i = n;
-		while (i > 0)
-		{
-			i--;
-			((char *)dest)[i] = ((const char *)src)[i];
-		}
-	}
-	else
-		ft_memcpy (dest, src, n);
-	return (dest);
+	
 }

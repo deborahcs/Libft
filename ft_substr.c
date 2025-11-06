@@ -14,27 +14,22 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	size_t			length;
-	char			*new;
+	size_t	length;
+	char	*new;
+	size_t	len_s;
 
-	i = 0;
-	length = ft_strlen(s) - start;
-	new = (char *) malloc((sizeof (char)) * length + 1);
-	if (!new || !s)
+	if (!s)
 		return (NULL);
-	if (start >= len)
+	len_s = ft_strlen(s);
+	if (start >= len_s)
+		return (ft_calloc(1, 1));
+	if (len_s - start < len)
+		length = len_s - start;
+	else
+		length = len;
+	new = ((char *)malloc(length + 1));
+	if (!new)
 		return (NULL);
-	while (i < length)
-	{
-		new[i] = s[start + i];
-		i++;
-	}
+	ft_strlcpy(new, s + start, length + 1);
 	return (new);
 }
-/*#include <stdio.h>
-int main (void)
-{
-	const char	*src = "dogcat";
-	printf("%s\n", ft_substr(src, 3, 6));
-}*/

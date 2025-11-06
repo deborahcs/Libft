@@ -17,12 +17,12 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	char	*new;	
 
-	len = ft_strlen(s);
 	if (!(s))
 		return (NULL);
-	new = (char *) malloc(len + 1);
+	len = ft_strlen(s);
+	new = ((char *) malloc(len + 1));
 	if (new == NULL)
 		return (NULL);
-	ft_strlcpy(new, s, ft_strlen(s) + 1);
+	ft_strlcpy(new, s, len + 1);
 	return (new);
 }

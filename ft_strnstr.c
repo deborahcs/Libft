@@ -6,7 +6,7 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 08:58:50 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 11:10:57 by decabral         ###   ########.fr       */
+/*   Updated: 2025/11/07 09:55:29 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j++;
 			if (little[j] == 0)
 				return ((char *)big + i);
-			i++;
-			j = 0;
 		}
-		return (0);
+		j = 0;
+		i++;
 	}
+	return (0);
 }

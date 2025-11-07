@@ -6,7 +6,7 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:30:17 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 11:14:36 by decabral         ###   ########.fr       */
+/*   Updated: 2025/11/07 08:54:11 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	array = ((unsigned char *)s);
 	while (i < n)
 	{
-		if (array[i] == ((char *)c))
+		if (array[i] == ((unsigned char)c))
 			return ((void *)&array[i]);
 		i++;
 	}

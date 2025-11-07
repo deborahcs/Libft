@@ -53,9 +53,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(new, s1 + start, len + 1);
 	return (new);
 }
-/*
-int main (void)
-{
-
-}
-*/

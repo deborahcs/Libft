@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/31 12:06:37 by decabral          #+#    #+#             */
-/*   Updated: 2025/11/07 08:55:15 by decabral         ###   ########.fr       */
+/*   Created: 2025/11/06 17:43:30 by decabral          #+#    #+#             */
+/*   Updated: 2025/11/07 13:05:58 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *nptr)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	signal;
-	int	result;
+	char	*new;
+	size_t	len;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	signal = 1;
-	result = 0;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == ' ')
-		i++;
-	if (nptr[i] == 43 || nptr[i] == 45)
-	{
-		if (nptr[i] == 45)
-			signal *= -1;
-		i++;
-	}
-	while (nptr[i] >= 48 && nptr[i] <= 57)
-	{
-		result = result * 10 + (nptr[i] - 48);
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	new = (char *)malloc(sizeof (char) * len + 1);
+	if (!new)
+		return (NULL);
+	while (s1[i])
+	{	
+		new[i] = s1[i];
 		i++;
 	}
-	return (result * signal);
+	while (s2[j])
+		new[i++] = s2[j++];
+	new[i] = '\0';
+	return (new);
 }

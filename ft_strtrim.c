@@ -6,7 +6,7 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 13:10:30 by decabral          #+#    #+#             */
-/*   Updated: 2025/11/07 16:31:15 by decabral         ###   ########.fr       */
+/*   Updated: 2025/11/10 14:59:44 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,8 @@ static int	ft_is_in_set(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new;
 	size_t	start;
 	size_t	end;
-	size_t	len;
 	size_t	len_s1;
 
 	if (!s1 || !set)
@@ -43,13 +41,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end = 0;
 	while (end > start && ft_is_in_set(s1[end], set))
 		end--;
-	if (start > end)
-		len = 0;
-	else
-		len = end - start + 1;
-	new = (char *)malloc(sizeof(char) * (len + 1));
-	if (!new)
-		return (NULL);
-	ft_strlcpy(new, s1 + start, len + 1);
-	return (new);
+	return (ft_substr(s1, start, end - start + 1));
 }
+/*#include <stdio.h>
+int main (void)
+{
+	printf("%s\n", ft_strtrim("ababababkbacaxiabababa", "ab"));
+}*/

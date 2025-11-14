@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Returns the pointer of the first time that char occured */
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;

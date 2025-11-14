@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 10:27:40 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 08:55:43 by decabral         ###   ########.fr       */
+/*   Created: 2025/11/13 16:22:03 by decabral          #+#    #+#             */
+/*   Updated: 2025/11/13 16:22:07 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* It sets memmry to \0, its like memset but with zeros */
-void	ft_bzero(void *s, size_t n)
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
+	size_t	len;
+	char	*new;
 
 	i = 0;
-	while (i < n)
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	new = (char *)malloc(sizeof(char) * len + 1);
+	if (!new)
+		return (NULL);
+	while (s[i])
 	{
-		((char *)s)[i] = 0;
+		new[i] = f(i, s[i]);
 		i++;
 	}
+	new[i] = '\0';
+	return (new);
 }

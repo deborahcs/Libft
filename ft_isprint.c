@@ -6,9 +6,11 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:00:25 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/20 18:00:26 by decabral         ###   ########.fr       */
+/*   Updated: 2025/11/13 17:55:08 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Returns the pointer of the last time that char occured */
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;	
+	int		i;
 	char	pointer;
 
 	i = ft_strlen(s);

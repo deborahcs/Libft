@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Cuts off whats in set returning a copy sized by malloc */
 static int	ft_is_in_set(char c, char const *set)
 {
 	while (*set)
@@ -43,8 +43,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, end - start + 1));
 }
-/*#include <stdio.h>
-int main (void)
-{
-	printf("%s\n", ft_strtrim("ababababkbacaxiabababa", "ab"));
-}*/

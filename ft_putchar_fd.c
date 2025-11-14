@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 10:27:40 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 08:55:43 by decabral         ###   ########.fr       */
+/*   Created: 2025/11/13 17:46:59 by decabral          #+#    #+#             */
+/*   Updated: 2025/11/13 17:55:19 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* It sets memmry to \0, its like memset but with zeros */
-void	ft_bzero(void *s, size_t n)
-{
-	size_t	i;
 
-	i = 0;
-	while (i < n)
-	{
-		((char *)s)[i] = 0;
-		i++;
-	}
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }

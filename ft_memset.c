@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* It sets to memmory the value in c */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;

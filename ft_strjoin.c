@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Returns a new string sized by malloc concatenating strs */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;

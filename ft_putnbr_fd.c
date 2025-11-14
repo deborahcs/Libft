@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 10:27:40 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/31 08:55:43 by decabral         ###   ########.fr       */
+/*   Created: 2025/11/13 17:55:30 by decabral          #+#    #+#             */
+/*   Updated: 2025/11/13 18:30:41 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* It sets memmry to \0, its like memset but with zeros */
-void	ft_bzero(void *s, size_t n)
-{
-	size_t	i;
 
-	i = 0;
-	while (i < n)
+void	ft_putnbr_fd(int n, int fd)
+{
+	long	num;
+	char	c;
+
+	num = n;
+	if (num < 0)
 	{
-		((char *)s)[i] = 0;
-		i++;
+		num *= -1;
+		write(fd, "-", 1);
+	}
+	if (num >= 0 && num <= 9)
+	{
+		c = num + '0';
+		write(fd, &c, 1);
+	}
+	if (num > 9)
+	{
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
 	}
 }

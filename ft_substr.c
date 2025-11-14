@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Returns a new str with limits by start and len */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	length;

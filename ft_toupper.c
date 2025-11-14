@@ -6,11 +6,13 @@
 /*   By: decabral <decabral@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 18:50:25 by decabral          #+#    #+#             */
-/*   Updated: 2025/10/20 18:50:28 by decabral         ###   ########.fr       */
+/*   Updated: 2025/11/13 17:56:10 by decabral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;
